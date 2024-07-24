@@ -9,15 +9,14 @@ function App() {
     theme: '',
     contact: '',
     message: '',
-    isChecked: false
   })
 
   function handleChange(e) {
-    const { name, value, type, checked } = e.target
+    const { name, value } = e.target
     setFormData(prevFormData => {
       return {
         ...prevFormData,
-        [name]: type === 'checkbox' ? checked : value
+        [name]: value
       }
     })
   }
@@ -81,12 +80,6 @@ function App() {
           placeholder='Message...'
           rows='5'
         />
-        <input
-          type='checkbox'
-          name='isChecked'
-          checked={formData.isChecked}
-          onChange={handleChange}
-        ></input>
       </form>
     </>
   )
