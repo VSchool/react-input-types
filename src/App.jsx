@@ -7,6 +7,7 @@ function App() {
     name: '',
     age: '',
     theme: '',
+    canContact: false,
     contact: '',
     message: '',
   })
@@ -41,37 +42,14 @@ function App() {
           placeholder='Age'
         />
 
-        <select
-          name='theme'
-          value={formData.theme}
-          onChange={handleChange}
-        >
-          <option value=''>Choose Theme</option>
-          <option value='dark'>Dark</option>
-          <option value='light'>Light</option>
-        </select>
+        {/* Select/Option */}
 
-        <p>Choose Preferred Contact Method</p>
 
-        <label>
-          Email
-          <input
-            type='radio'
-            name='contact'
-            value='Email'
-            onChange={handleChange}
-          />
-        </label>
+        {/* Checkbox */}
 
-        <label>
-          Phone
-          <input
-            type='radio'
-            name='contact'
-            value="Phone"
-            onChange={handleChange}
-          />
-        </label>
+
+        {/* Radio */}
+
 
         <textarea
           name='message'
